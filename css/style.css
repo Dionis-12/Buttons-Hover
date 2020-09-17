@@ -1,0 +1,74 @@
+
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	margin-top: 280px;
+	text-align: center;
+}
+
+.btn {
+	background: none;
+	border: 1px solid #3498db;
+	cursor: pointer;
+	font-size: 20px;
+	font-family: "Monserrat";
+	margin: 10px;
+	overflow: hidden;
+	padding: 10px 20px;
+	position: relative;
+	transition: 0.8s;
+}
+
+.btn1, .btn2 {
+	color: #3498db;
+}
+
+.btn3, .btn4 {
+	color: #fff;
+}
+
+.btn1:hover, .btn2:hover {
+	color: #fff;
+}
+
+.btn3:hover, .btn4:hover {
+	color: #3498db;
+}
+
+.btn::before {
+	background: #3498db;
+	content: '';
+	left: 0;
+	height: 0%;
+	position: absolute;
+	transition: 0.8s;
+	width: 100%;
+	z-index: -1;
+}
+
+.btn1::before, .btn3::before {
+	border-radius: 0 0 50% 50%;
+	top: 0;
+}
+
+.btn2::before, .btn4::before {
+	border-radius: 50% 50% 0 0;
+	bottom: 0;
+}
+
+.btn3::before, .btn4::before {
+	height: 180%;
+}
+
+.btn1:hover::before, .btn2:hover::before {
+	height: 180%;
+}
+
+.btn3:hover::before, .btn4:hover::before {
+	height: 0%;
+}
